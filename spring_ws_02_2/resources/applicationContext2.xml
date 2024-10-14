@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+<<<<<<< HEAD
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.ssafy.ws.Action" id="action"></bean>
+
+    
+    <bean class="com.ssafy.ws.Audience" id="audience2">
+        <constructor-arg ref="action"></constructor-arg>
+       
+    </bean>
+
+    
+    <bean class="com.ssafy.ws.Audience" id="audienceSetter">
+        <property name="movie" ref="action"></property>
+    </bean>
+=======
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--  아랫줄을 추가하면 Test에서 수행 객체를 인터페이스 뿐 아니라 클래스로도 불러올 수 있음-->
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+	<context:component-scan base-package="com.ssafy.ws"/>
+		
+>>>>>>> a47fe4f (1011_AOP 과제 완료)
+
+</beans>
